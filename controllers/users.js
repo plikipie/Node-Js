@@ -13,7 +13,7 @@ module.exports = {
                 next(err);
             } else {
                 res.json({
-                    status:"succes",
+                    status:"success",
                     message:"ok",
                     data:null
                 });
@@ -32,10 +32,11 @@ module.exports = {
                         req.app.get('jwtSecretKey'),
                         {expiresIn: '1h'
                     });
+
                     res.json({
                         status:"sukses",
                         message:"ok",
-                        data:{user: userInfo, token:token}});
+                        data:{user: { name: userInfo.name, email:userInfo.email}, token:token}});
                 } else { 
                     res.json({
                         status:"erorr",
