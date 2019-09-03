@@ -34,7 +34,7 @@ module.exports = {
                     });
 
                     res.json({
-                        status:"sukses",
+                        status:"success",
                         message:"ok",
                         data:{user: { name: userInfo.name, email:userInfo.email}, token:token}});
                 } else { 

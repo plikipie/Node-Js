@@ -8,7 +8,6 @@ const users = require('./routes/users');
 //
 const notes = require('./routes/notes');
 const mongoose = require('./config/database');
-var jwt = require('jsonwebtoken');
 app.use(bodyParser.urlencoded({extended:false}));
 app.set('jwtSecretKey', 'kunciRahasia');
 //
